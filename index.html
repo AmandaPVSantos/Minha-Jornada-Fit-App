@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Treino</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#peso">Acompanhamento de Peso</a></li>
+        <li><a href="#exercicios">Exercícios Realizados</a></li>
+        <li><a href="#calendario">Calendário de Treino</a></li>
+        <li><a href="#meta">Meta Pessoal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Acompanhamento de Peso -->
+    <section id="peso">
+      <h2>Acompanhamento de Peso</h2>
+      <form id="form-peso">
+        <input type="number" id="peso-input" placeholder="Digite seu peso (kg)" step="0.1" required>
+        <button type="submit">Salvar Peso</button>
+      </form>
+      <canvas id="grafico-peso"></canvas>
+    </section>
+
+    <!-- Exercícios Realizados -->
+    <section id="exercicios">
+      <h2>Exercícios Realizados</h2>
+      <form id="form-exercicio">
+        <input type="text" id="exercicio-input" placeholder="Nome do exercício" required>
+        <input type="date" id="exercicio-data" required>
+        <button type="submit">Adicionar Exercício</button>
+      </form>
+      <ul id="lista-exercicios"></ul>
+    </section>
+
+    <!-- Calendário de Treino -->
+    <section id="calendario">
+      <h2>Calendário de Treino</h2>
+      <div id="calendario-container"></div>
+    </section>
+
+    <!-- Meta Pessoal -->
+    <section id="meta">
+      <h2>Meta Pessoal</h2>
+      <form id="form-meta">
+        <label for="meta-treino">Dias de treino por semana:</label>
+        <input type="number" id="meta-treino" min="1" max="7" required>
+        
+        <label for="meta-peso">Peso desejado (kg):</label>
+        <input type="number" id="meta-peso" step="0.1" required>
+        
+        <button type="submit">Salvar Meta</button>
+      </form>
+      <p id="mensagem-meta"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Meu Treino - Desenvolvido por Amanda com carinho! ♥</p>
+  </footer>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
